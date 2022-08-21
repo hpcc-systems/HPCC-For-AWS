@@ -1,0 +1,24 @@
+# Kubernetes Cluster Settings
+#-----------------------------
+#declare -A EKS_SUBNET_IDS
+#
+EKS_SUBNET_IDS=()
+EKS_SUBNET_IDS=(
+ ["us-east-2a"]="subnet-cd333fa5"
+ ["us-east-2b"]="subnet-1f8bf165"
+ ["us-east-2c"]="subnet-79e74a35"
+)
+
+VPC_SUBNETS="--vpc-public-subnets ${EKS_SUBNET_IDS['us-east-2a']} \
+--vpc-public-subnets ${EKS_SUBNET_IDS['us-east-2b']} "
+
+#TAGS="lifecycle=dev,\
+#market=us,\
+#bu=<work unit for example HPCC-PLatform-Dev>,\
+#owner_email=<owner email>,\
+#costcenter=STXXX,\
+#product=hpccsystems,\
+#support_email=<supporter email,\
+#application=hpccsystems,\
+#service=eks,\
+#project=<project name>"

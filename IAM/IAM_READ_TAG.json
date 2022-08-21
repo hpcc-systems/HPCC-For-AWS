@@ -1,0 +1,52 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": [
+        "iam:GenerateCredentialReport",
+        "iam:CreateInstanceProfile",
+        "iam:DeleteAccessKey",
+        "iam:List*",
+        "iam:UntagRole",
+        "iam:GenerateServiceLastAccessedDetails",
+        "iam:PutRolePermissionsBoundary",
+        "iam:TagRole",
+        "iam:RemoveRoleFromInstanceProfile",
+        "iam:CreateRole",
+        "iam:AttachRolePolicy",
+        "iam:PutRolePolicy",
+        "iam:DeleteRolePermissionsBoundary",
+        "iam:AddRoleToInstanceProfile",
+        "iam:CreateAccessKey",
+        "iam:PassRole",
+        "iam:Get*",
+        "iam:SimulateCustomPolicy",
+        "iam:DetachRolePolicy",
+        "iam:SimulatePrincipalPolicy",
+        "iam:GenerateOrganizationsAccessReport",
+        "iam:DeleteRolePolicy",
+        "iam:CreateAccountAlias",
+        "iam:UploadSSHPublicKey",
+        "iam:CreatePolicyVersion",
+        "iam:DeleteAccountAlias",
+        "iam:DeleteLoginProfile",
+        "iam:DeleteInstanceProfile",
+        "iam:PutUserPermissionsBoundary",
+        "iam:DeleteRole",
+        "iam:UpdateRoleDescription",
+        "iam:UpdateAccessKey",
+        "iam:UpdateSSHPublicKey",
+        "iam:TagUser",
+        "iam:CreatePolicy",
+        "iam:UntagUser",
+        "iam:CreateServiceLinkedRole",
+        "iam:UpdateRole",
+        "iam:DeleteServiceLinkedRole",
+        "iam:DeletePolicyVersion"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
