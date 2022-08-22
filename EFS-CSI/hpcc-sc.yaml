@@ -1,0 +1,12 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: aws-efs
+provisioner: efs.csi.aws.com
+parameters:
+  provisioningMode: efs-ap
+  fileSystemId: fs-0799d800bebea2e38
+  directoryPerms: "700"
+  #gidRangeStart: "1000" # optional
+  #gidRangeEnd: "2000" # optional
+  basePath: "/hpcc-efs" # optional
