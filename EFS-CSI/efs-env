@@ -6,6 +6,7 @@ EFS_REGION=us-east-1
 EFS_SECURITY_GROUPS=
 EFS_NAME=efs-provisioner
 EFS_CSI_DRIVER=true
+VPC_ID=
 
 # Reference https://docs.aws.amazon.com/eks/latest/userguide/add-ons-images.html
 EFS_CSI_DRIVER_ACCOUNT_ID_BY_REGION=602401143452

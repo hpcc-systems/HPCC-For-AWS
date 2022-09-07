@@ -1,8 +1,8 @@
 #!/bin/bash
 WORK_DIR=$(dirname $0)
-AWS_DIR=$(cd ${WORK_DIR}/../..;  pwd); cd $WORK_DIR
-source ${AWS_DIR}/aws-saml-profile
-[[ -n $RISK_USERNAME ]] && ${AWS_DIR}/aws-get-saml
+EKS_DIR=$(cd ${WORK_DIR}/..;  pwd); cd $WORK_DIR
+source ${EKS_DIR}/aws-saml-profile
+${EKS_DIR}/aws-get-saml
 
 source ${WORK_DIR}/configuration
 [[ -n "$1" ]] && source $1

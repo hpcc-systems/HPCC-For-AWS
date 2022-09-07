@@ -1,4 +1,6 @@
 #export RISK_USERNAME=
 #export RISK_PASSWORD=
-export AWS_REGION="us-east-1"
+#export AWS_PROFILE=ris-hpccsystems-dev
+#export AWS_PROFILE=ris-hpccsystems-prod
 export AWS_PROFILE=default
+export AWS_REGION="us-east-1"

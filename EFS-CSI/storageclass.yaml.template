@@ -5,8 +5,8 @@ metadata:
 provisioner: efs.csi.aws.com
 parameters:
   provisioningMode: efs-ap
-  fileSystemId: fs-0799d800bebea2e38
+  fileSystemId: <EFS_ID>
   directoryPerms: "700"
   #gidRangeStart: "1000" # optional
   #gidRangeEnd: "2000" # optional
-  basePath: "/hpcc-efs" # optional
+  basePath: "<EFS_BASE_PATH>" # optional
