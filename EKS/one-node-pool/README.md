@@ -7,4 +7,4 @@ Change configuration in configuration file
 ./start.sh
 
 ## Clean up
-./delete-aks.sh
+./stop.sh

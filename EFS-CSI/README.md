@@ -14,6 +14,16 @@ EFS_ID           # EFS ID can be found from AWS Console or command-line:
 EFS_REGION       # EFS region
 EFS_SECURITY_GROUPS  # EFS seucurity group which is the subnet security group which should be same as EKS
 ```
+
+## Add NFS Inbound Rule
+Either from the AWS Console or run the following script to add the NFS inbound rule if no such rule is present.
+Allow subnets of the VPC to access port 2049 (NFS).
+
+```code
+./add-inbound-nfs-rule.sh
+```
+
+
 ## Install EFS CSI Driver
 Run following command:
 ```code
@@ -34,7 +44,7 @@ efs-csi-node-fp8vt                    3/3     Running   0          32h
 
 ## Install "aws-efs" Stroage Class
 ```console
-kubectl apply -f hpcc-sc.yaml
+kubectl apply -f storageclass.yaml
 ```
 To verify
 ```code

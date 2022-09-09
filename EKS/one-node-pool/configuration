@@ -15,7 +15,7 @@ MAX_COUNT=10
 NODE_VOLUME_SIZE=100
 NODE_AMI="auto"
 NODE_TYPE=m4.2xlarge
-NODE_GROUP_NAME="standard-workers"
+NODE_GROUP_NAME="${EKS_NAME}-workers"
 
 NODE_SECURITY_GROUPS="--node-security-groups <security group of the subnets, for example, sg-6c529d08>"
 

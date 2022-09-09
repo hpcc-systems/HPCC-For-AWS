@@ -56,9 +56,13 @@ NAME            PROVISIONER             RECLAIMPOLICY   VOLUMEBINDINGMODE      A
 aws-efs         efs.csi.aws.com         Delete          Immediate              false                  29h
 gp2 (default)   kubernetes.io/aws-ebs   Delete          WaitForFirstConsumer   false                  37h
 ```
-cd to helm/ and run
+Currently helm/example/efs is broken due the expired old EFS CSI Provider
+We do provide a fix in this repo: EFS-CSI
+cd to EFS-CCI directory
+#cd to helm/ and run
 ```console
-helm install awsstorage examples/efs/hpcc-efs
+helm install awsstorage ./hpcc-efs
+#helm install awsstorage examples/efs/hpcc-efs
 kubectl get pv
 NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                                        STORAGECLASS   REASON   AGE
 pvc-08469c4d-bb33-4735-a172-befbc0f63211   1Gi        RWO            Delete           Bound    default/dali-awsstorage-hpcc-efs-pvc         aws-efs                 29h
