@@ -1,0 +1,47 @@
+# Kubernetes Cluster Settings
+#-----------------------------
+#These are needed for aws_get_sam1.py
+
+EKS_REGION="${AWS_REGION}"
+EKS_NAME="<EKS Cluster name, such as eks-demo-${AWS_REGION}>"
+
+export INPUT_EKS_REGION=$EKS_REGION
+export INPUT_EKS_NAME=$EKS_NAME
+
+#KUBERNETES_VERSION="1.22"
+NODE_COUNT=2
+MIN_COUNT=2
+MAX_COUNT=10
+NODE_VOLUME_SIZE=100
+NODE_AMI="auto"
+NODE_TYPE=m4.2xlarge
+NODE_GROUP_NAME="${EKS_NAME}-workers"
+
+NODE_SECURITY_GROUPS="--node-security-groups <security group of the subnets, for example, sg-6c529d08>"
+
+# VPC: vpc-60731005
+declare -A EKS_SUBNET_IDS
+EKS_SUBNET_IDS=(
+ ["us-east-1a"]="<subnet of EFS and EKS, such as subnet-65cf613c>"
+ ["us-east-1d"]="<subnet of EFS and EKS, such as subnet-4b55da3c>"
+ ["us-east-1e"]="<subnde of EFS and EKS, such as subnet-dc9b51f7>"
+)
+# you add additional subnets if available
+# ["us-east-1b"]=""
+# ["us-east-1c"]="subnet-f8e389c2"
+#
+#
+#For EKS cluster you need provide at least two subnets
+VPC_SUBNETS="--vpc-public-subnets ${EKS_SUBNET_IDS['us-east-1a']} \
+--vpc-public-subnets ${EKS_SUBNET_IDS['us-east-1d']} "
+
+TAGS="lifecycle=<dev, test,prod, etc.>,\
+market=<country code, such as us>,\
+bu=<work unit, for example, HPCC-Platform-prod>,\
+owner_email=<owner email>,\
+costcenter=< cost center code, such as STXXX>,\
+product=hpccsystems,\
+support_email=<supporter email>,\
+application=hpccsystems,\
+service=eks,\
+project=<project name, such HPCC Demo>"
